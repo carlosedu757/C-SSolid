@@ -1,28 +1,45 @@
-﻿namespace Aplicando_Principios_SOLID1
+﻿using Aplicando_Principios_SOLID1.Enum;
+using System;
+
+namespace Aplicando_Principios_SOLID1
 {
-    public class GerDesc
+    public class GerenciadorDesconto
     {
-        private decimal _resultado = 0;
-        public virtual decimal Calcular(decimal valor, int tipo, int anos)
+        public /*virtual*/ decimal AplicarDesconto(decimal precoProduto, StatusContaCliente statusContaCliente, int tempoDeContaEmAnos)
         {
-            decimal desc = (anos > 5) ? (decimal)5 / 100 : (decimal)anos / 100;
-            if (tipo == 1)
+            decimal precoAposDesconto = 0;
+            decimal descontoPorFidelidade = (tempoDeContaEmAnos > Constantes.DESCONTO_MAXIMO_POR_FIDELIDADE) ?
+                Constantes.DESCONTO_MAXIMO_POR_FIDELIDADE / 100 : (decimal)tempoDeContaEmAnos / 100;
+
+
+            switch (statusContaCliente)
             {
-                resultado = valor;
+                case StatusContaCliente.NaoRegistrado:
+                    precoAposDesconto = precoProduto;
+                    break;
+
+                case StatusContaCliente.ClienteComum:
+                    precoAposDesconto = CalculaDescontoPorStatus(precoProduto, Constantes.DESCONTO_CLIENTE_COMUM, descontoPorFidelidade);
+                    break;
+
+                case StatusContaCliente.ClienteEspecial:
+                    precoAposDesconto = CalculaDescontoPorStatus(precoProduto, Constantes.DESCONTO_CLIENTE_ESPECIAL, descontoPorFidelidade);
+                    break;
+
+                case StatusContaCliente.ClienteVIP:
+                    precoAposDesconto = CalculaDescontoPorStatus(precoProduto, Constantes.DESCONTO_CLIENTE_VIP, descontoPorFidelidade);
+                    break;
+                default:
+                    throw new NotImplementedException();
             }
-            else if (tipo == 2)
-            {
-                resultado = (valor - (0.1m * valor)) - desc * (valor - (0.1m * valor));
-            }
-            else if (tipo == 3)
-            {
-                resultado = (0.7m * valor) - desc * (0.7m * valor);
-            }
-            else if (tipo == 4)
-            {
-                resultado = (valor - (0.5m * valor)) - desc * (valor - (0.5m * valor));
-            }
-            return resultado;
+            return precoAposDesconto;
+        }
+
+        public static decimal CalculaDescontoPorStatus(decimal precoProduto, decimal desconto, decimal descontoPorFidelidade)
+        {
+            decimal precoAposDesconto = precoProduto - (desconto * precoProduto);
+
+            return precoAposDesconto - descontoPorFidelidade * (precoProduto - (desconto * precoProduto));
         }
     }
 }
