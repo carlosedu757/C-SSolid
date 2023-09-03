@@ -6,7 +6,7 @@ namespace Aplicando_Principios_SOLID1
     {
         static void Main(string[] args)
         {
-            GerDesc gerDesc = new GerDesc();
+            GerenciadorDesconto gerDesc = new GerenciadorDesconto();
             Console.WriteLine("Valor da compra 1000 e fidelidade 10 anos (5%)\n");
 
             var resultado = gerDesc.Calcular(1000, 2, 10);
