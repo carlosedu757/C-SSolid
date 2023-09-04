@@ -2,7 +2,7 @@
 
 namespace cursoFoop_Exercicio_SOLID1
 {
-    class Cliente
+    public class Cliente
     {
         public string Nome { get; set; }
         public string Pais { get; set; }
