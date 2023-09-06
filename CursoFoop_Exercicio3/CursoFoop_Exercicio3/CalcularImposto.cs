@@ -2,23 +2,9 @@
 {
     class CalcularImposto
     {
-        public static decimal Calcular(decimal valor, decimal deducao, string pais)
+        public decimal Calcular(ICalculaImposto icalc)
         {
-            decimal valorImposto = 0;
-            decimal valorBase = valor - deducao;
-            switch (pais)
-            {
-                case "Brazil":
-                    //código cálculo
-                    break;
-                case "USA":
-                    //código cálculo
-                    break;
-                case "UK":
-                    //código cálculo
-                    break;
-            }
-            return valorImposto;
+            return icalc.CalculaImpostoPais();
         }
     }
 }
