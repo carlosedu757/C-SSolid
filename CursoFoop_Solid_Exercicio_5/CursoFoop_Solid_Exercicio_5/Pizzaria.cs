@@ -2,17 +2,15 @@
 {
     class Pizzaria
     {
-        private Pizza pizza;
-        public void CriarPizza(string tipo)
+
+        private readonly IPedidoPizzaFactory pedidoPizzaFactory;
+        public Pizzaria(IPedidoPizzaFactory pedidoPizzaFactory)
         {
-            if (tipo.Equals("mussarela"))
-            {
-                pizza = new PizzaMussarela();
-            }
-            else if (tipo.Equals("calabresa"))
-            {
-                pizza = new PizzaCalabresa();
-            }
+            this.pedidoPizzaFactory = pedidoPizzaFactory;
+        }
+        public void CriarPizza(SaborPizza saborPizza)
+        {
+            pedidoPizzaFactory.GetPedidoPizza(saborPizza);
         }
     }
 }
