@@ -1,16 +1,18 @@
-﻿namespace CursoFoop_Solid_Exercicio_5
+﻿namespace CursoFoop_Exercicio5_Resposta
 {
     class Pizzaria
     {
-
-        private readonly IPedidoPizzaFactory pedidoPizzaFactory;
-        public Pizzaria(IPedidoPizzaFactory pedidoPizzaFactory)
+        private Pizza pizza;
+        PizzaFactory factory;
+        public Pizzaria(PizzaFactory factory)
         {
-            this.pedidoPizzaFactory = pedidoPizzaFactory;
+            this.factory = factory;
         }
-        public void CriarPizza(SaborPizza saborPizza)
+        public void CriarPizza(string tipo)
         {
-            pedidoPizzaFactory.GetPedidoPizza(saborPizza);
+            pizza = factory.CriarPizza(tipo);
+            pizza.AssarPizza();
+            pizza.DeliveryPizza();
         }
     }
 }

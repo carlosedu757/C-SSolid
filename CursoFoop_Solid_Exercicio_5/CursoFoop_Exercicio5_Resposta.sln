@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoFoop_Solid_Exercicio_5", "CursoFoop_Solid_Exercicio_5\CursoFoop_Solid_Exercicio_5.csproj", "{63532F6E-D035-4EA0-B917-FE135844D0AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoFoop_Exercicio5_Resposta", "CursoFoop_Exercicio5_Resposta\CursoFoop_Exercicio5_Resposta.csproj", "{6CD5E935-7388-4BA9-BEB3-038391E07F40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{63532F6E-D035-4EA0-B917-FE135844D0AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{63532F6E-D035-4EA0-B917-FE135844D0AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63532F6E-D035-4EA0-B917-FE135844D0AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{63532F6E-D035-4EA0-B917-FE135844D0AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CD5E935-7388-4BA9-BEB3-038391E07F40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CD5E935-7388-4BA9-BEB3-038391E07F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CD5E935-7388-4BA9-BEB3-038391E07F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CD5E935-7388-4BA9-BEB3-038391E07F40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0D2159CD-ADE5-482E-A0DA-BAD3D741D5FC}
+		SolutionGuid = {2794FE85-6CC9-4BAD-8B20-788B4A200837}
 	EndGlobalSection
 EndGlobal
