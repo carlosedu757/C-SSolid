@@ -1,0 +1,19 @@
+1 - Uma classe é criada no próprio códgio C#, onde usamos o namespace, depois declaramos uma clsse, dentro dela seus atributos, depois construtores e depois seus métodos, e um objeto é uma instancia de uma classe.
+
+2 - Abstração acredito que venha no sentido de trazer coisas do mundo real e consegui-las abstrair em código, como por exemplo uma classe Conta, que possui saldo, nome do dono, numeros da conta, metodo de saque, esse conceito que é abstrair um 'objeto' do mundo real para um código
+
+3 - Falei na questão 2
+
+4 - Encapsulamento eu fico devendo, mas acredito que seja usado para segurança de código, já que quando há um encapsulamento, o que foi encapsulado fica retido apenas ao encapsulador.
+
+5 - quando uma classe é instanciada.
+
+6- Depende se há relações de herança entre as classes, mas não havendo relações, será 5x
+
+7 - Para instanciar uma classe, e faço o uso do mesmo quando podemos ter um leque de opções para conseguir fazer a instanciação com dados sendo ou não necessarios
+
+8 - Código
+
+9 - Código, podemos usar uma lista de params para trazer quandos inteiros quiserem ser referenciados, ou fazer a criação de 3 construtores (soma de 2, 3 ou 4 numbers)
+
+10 - Serve para reaproveitar tudo de uma classe pai, que será utilizada na classe filha que abrange mais opções.
